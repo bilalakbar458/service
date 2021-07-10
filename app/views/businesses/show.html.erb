@@ -1,3 +1,23 @@
 <h1>
 <%= @business.name %>
+
 </h1>
+
+<h2>Tasks</h2>
+<ul>
+<% for task in @business.tasks %>
+    <li><%= task.title %> (<%= task.task_type %>) Due by: <%= task.due_date %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add a task", new_task_path(business_id: @business) %>
+
+
+
+
+<h2>Team Members</h2>
+<ul>
+<% for user in @business.users %>
+    <li><%= user.name %></li>
+<% end %>
+</ul>

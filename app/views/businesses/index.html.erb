@@ -1,0 +1,10 @@
+<h1>Businesses</h1>
+
+<%= link_to "Create new business", new_business_path %>
+<br><br>
+<hr>
+
+
+<% for business in @businesses %>
+    <%= link_to business.name, business_path(business) %> <br>
+<% end %>

@@ -1,0 +1,36 @@
+<h1>Add a task</h1>
+
+
+<%= form_for @task  do |form| %>
+
+<table>
+    <div class="field">
+        <tr>
+        <td><%= form.label :title %></td>
+        <td><%= form.text_field :title %></td>
+        <tr>
+    </div>
+
+    <div class="field">
+        <tr>
+        <td><%= form.label :task_type %></td>
+        <td>
+    <%= form.select :task_type, [["Feature", "feature"], ["Bug", "bug"]], selected: "feature" %></td>
+        </tr>
+    </div>
+    <div class="field">
+        <tr>
+        <td><%= form.label :due_date %></td>
+        <td><%= form.date_field :due_date %></td>
+        </tr>
+    </div>
+    <%= form.hidden_field :business_id%>
+
+    <div class="actions">
+        <tr>
+        <td><%= form.submit%></td>
+        </tr>
+    </div>
+</table>
+<% end %>
+

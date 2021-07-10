@@ -1,5 +1,17 @@
-<H1>Maybe</H1>
+<H1>Member Area</H1>
 
+<h2>
+Hello <%= current_user.name.split.first %>
+</h2>
 
+<h3>You have the following Businesses</h3>
 
-<a href = "Create a Business">Link</a>
+<ul>
+<% for business in current_user.businesses %>
+    <li><%= link_to business.name, business_path(business) %></li>
+<% end %>
+</ul>
+
+<% if current_user.user_type == "admin" %>
+    <%= link_to "Businesses", businesses_path%>
+<% end %>
