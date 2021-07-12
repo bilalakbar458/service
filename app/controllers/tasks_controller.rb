@@ -9,7 +9,7 @@ class TasksController < ApplicationController
             if @task.save
                 format.html { redirect_to business_path(params[:task][:business_id]), notice: "Your portfolio item is now live" }
             else
-                format.html { render :new, status: :unprocessable_entity }
+                format.html { render :new, status: :unprocessable_entity, notice: "Task could not be created" }
             end
         end
     end
