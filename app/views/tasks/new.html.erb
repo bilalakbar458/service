@@ -24,6 +24,12 @@
         <td><%= form.date_field :due_date %></td>
         </tr>
     </div>
+    <div class="field">
+        <tr>
+        <td><%= form.label :image %></td>
+        <td><%= form.file_field :image %></td>
+        </tr>
+    </div>
     <%= form.hidden_field :business_id%>
 
     <div class="actions">

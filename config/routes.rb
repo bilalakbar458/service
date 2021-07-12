@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
 
   get "member-area", to: "pages#member_area"
+  get "admin_space", to: "pages#admin_space"
 
   get "after_sign_in_path_for", to: "pages#test"
   root to: "pages#home"

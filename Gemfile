@@ -19,6 +19,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Authentication with devise
 gem 'devise', '~> 4.8'
+# Upload files in your Ruby applications, map them to a range of ORMs, store them on different backends.
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+# Object oriented authorization for Rails applications
+gem 'pundit', '~> 2.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

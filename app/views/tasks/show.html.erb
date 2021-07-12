@@ -1,0 +1,17 @@
+<h1>
+<%= @task.title %>
+</h1>
+
+<h2>
+<%= @task.task_type %>
+</h2>
+
+<p>
+<%= "Due Date: #{@task.due_date} "  %>
+</p>
+
+<% unless @task.image.file.nil? %>
+    <h2>Display Picture</h2>
+    <% image = @task.image.url%>
+    <%= image_tag(image) %>
+<% end %>
